@@ -1,6 +1,3 @@
-Here’s a professional-level README template tailored to your project, using **Next.js**, **Tailwind CSS**, **Zod**, **MongoDB**, **JWT**, and other technologies:
-
-```markdown
 # Advanced College Timetable Management System
 
 An advanced web application for managing college timetables with role-based access for administrators, faculty, and students. The system offers personalized schedules, real-time notifications, attendance tracking, and conflict-free resource allocation, built using modern technologies to ensure scalability, efficiency, and mobile responsiveness.
@@ -56,8 +53,8 @@ An advanced web application for managing college timetables with role-based acce
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/college-timetable.git
-    cd college-timetable
+    git clone https://github.com/kamlesh-Sahani/Time-Table.git
+    cd Time-Table
     ```
 
 2. Install dependencies:
@@ -167,20 +164,7 @@ college-timetable/
 - **iCal Integration**: Allow users to export their timetable to iCal format.
 - **Push Notifications**: Integrate push notifications for real-time updates on schedule changes.
 - **Attendance Analytics**: Provide faculty and admins with detailed analytics on student attendance.
-- **Multi-Language Support**: Add support for multiple languages to increase accessibility.
-- **PWA Support**: Convert the web app into a Progressive Web App for offline functionality and better mobile experience.
 
-## Contributing
-
-We welcome contributions! To get started, follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Submit a pull request.
-
-Please make sure to follow the code style and include proper documentation for any new features or changes.
 
 ## License
 
@@ -188,17 +172,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-**Project Author**: [Your Name](https://github.com/yourusername)
-
-- **Email**: your.email@example.com
-- **GitHub**: [yourusername](https://github.com/yourusername)
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/your-profile)
-
-```
-
-### Customization Steps:
-- **Replace the placeholders** (e.g., your GitHub username, email, and specific URLs).
-- **Add additional pages, models, or features** as your project evolves.
-- **Consider adding screenshots** or gifs of your app in action to make it visually appealing.
-
-This README provides a professional and comprehensive overview of your project, making it easier for collaborators or potential users to understand, use, and contribute.
+- **Email**: kamleshbca2005@gmail.com
+- **LinkedIn**: [Kamlesh](https://www.linkedin.com/in/kamlesh-sahani-692ab7247)
