@@ -60,7 +60,6 @@ const TimeTablePage = () => {
           : t
       )
     );
-  };
 
   return (
     <div className="flex flex-col flex-1 h-full bg-back justify-center">
