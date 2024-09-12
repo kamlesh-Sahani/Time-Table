@@ -60,10 +60,9 @@ const TimeTablePage = () => {
           : t
       )
     );
-
+  };
   return (
     <div className="flex flex-col flex-1 h-full bg-back justify-center">
-    
       <TeacherSidebar teachers={teachers} handleTeacherSelect={handleTeacherSelect} />
   
       <div className='flex flex-col justify-center'>
