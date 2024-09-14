@@ -1,45 +1,46 @@
 "use client";
-import React, { useState } from 'react';
-import TimeTableCard from '@/components/TimeTableCard';
-import TeacherSidebar from '@/components/TeacherSidebar';
+import React, { useState } from "react";
+import TimeTableCard from "@/components/TimeTableCard";
+import TeacherSidebar from "@/components/TeacherSidebar";
+import TimeTableTabular from "@/components/TimeTableTabular";
 
 const TimeTablePage = () => {
   const [timetableData, setTimetableData] = useState([
     {
-      day: 'Monday',
+      day: "Monday",
       schedule: [
-        { subject: 'Math', teacher: 'Mr. John' },
-        { subject: 'C++', teacher: 'Ms. Smith' },
-        { subject: 'Break', teacher: '—' },
-        { subject: 'Python', teacher: 'Dr. Brown' },
+        { subject: "Math", teacher: "Mr. John" },
+        { subject: "C++", teacher: "Ms. Smith" },
+        { subject: "Break", teacher: "—" },
+        { subject: "Python", teacher: "Dr. Brown" },
       ],
     },
     {
-      day: 'Tuesday',
+      day: "Tuesday",
       schedule: [
-        { subject: 'Physics', teacher: 'Mr. Johnson' },
-        { subject: 'Chemistry', teacher: 'Ms. Davis' },
-        { subject: 'Break', teacher: '—' },
-        { subject: 'Biology', teacher: 'Dr. Wilson' },
+        { subject: "Physics", teacher: "Mr. Johnson" },
+        { subject: "Chemistry", teacher: "Ms. Davis" },
+        { subject: "Break", teacher: "—" },
+        { subject: "Biology", teacher: "Dr. Wilson" },
       ],
     },
   ]);
 
   // Mock teacher data
   const [teachers, setTeachers] = useState([
-    { name: 'Mr. John', subjects: ['Math', 'Physics'], classCount: 3 },
-    { name: 'Ms. Smith', subjects: ['C++', 'Computer Science'], classCount: 2 },
-    { name: 'Dr. Brown', subjects: ['Python', 'AI'], classCount: 4 },
-    { name: 'Ms. Davis', subjects: ['Chemistry', 'Biology'], classCount: 2 },
-    { name: 'Ms. Davis', subjects: ['Chemistry', 'Biology'], classCount: 2 },
-    { name: 'Ms. Davis', subjects: ['Chemistry', 'Biology'], classCount: 2 },
-    { name: 'Ms. Davis', subjects: ['Chemistry', 'Biology'], classCount: 2 },
-    { name: 'Ms. Davis', subjects: ['Chemistry', 'Biology'], classCount: 2 },
-    { name: 'Ms. Davis', subjects: ['Chemistry', 'Biology'], classCount: 2 },
+    { name: "Mr. John", subjects: ["Math", "Physics"], classCount: 3 },
+    { name: "Ms. Smith", subjects: ["C++", "Computer Science"], classCount: 2 },
+    { name: "Dr. Brown", subjects: ["Python", "AI"], classCount: 4 },
+    { name: "Ms. Davis", subjects: ["Chemistry", "Biology"], classCount: 2 },
+    { name: "Ms. Davis", subjects: ["Chemistry", "Biology"], classCount: 2 },
+    { name: "Ms. Davis", subjects: ["Chemistry", "Biology"], classCount: 2 },
+    { name: "Ms. Davis", subjects: ["Chemistry", "Biology"], classCount: 2 },
+    { name: "Ms. Davis", subjects: ["Chemistry", "Biology"], classCount: 2 },
+    { name: "Ms. Davis", subjects: ["Chemistry", "Biology"], classCount: 2 },
   ]);
 
   const [selectedTeacher, setSelectedTeacher] = useState(null);
-
+ 
   // Function to handle the teacher selection
   const handleTeacherSelect = (teacher) => {
     setSelectedTeacher(teacher);
@@ -49,7 +50,8 @@ const TimeTablePage = () => {
   const handleAssignTeacher = (dayIndex, slotIndex) => {
     if (!selectedTeacher) return;
     const updatedTimetable = [...timetableData];
-    updatedTimetable[dayIndex].schedule[slotIndex].teacher = selectedTeacher.name;
+    updatedTimetable[dayIndex].schedule[slotIndex].teacher =
+      selectedTeacher.name;
     setTimetableData(updatedTimetable);
 
     // Update the teacher's class count
@@ -63,14 +65,21 @@ const TimeTablePage = () => {
   };
   return (
     <div className="flex flex-col flex-1 h-full bg-back justify-center">
-      <TeacherSidebar teachers={teachers} handleTeacherSelect={handleTeacherSelect} />
-  
-      <div className='flex flex-col justify-center'>
-        <h1 className="text-2xl font-bold text-center my-4">Editable Timetable</h1>
+      <TeacherSidebar
+        teachers={teachers}
+        handleTeacherSelect={handleTeacherSelect}
+      />
+
+      <div className="flex flex-col  justify-center">
+        <h1 className="text-2xl font-bold text-center my-4">
+          Editable Timetable
+        </h1>
+       
         <p className="text-center mb-4">
-          Selected Teacher: {selectedTeacher ? selectedTeacher.name : 'None'}
+          Selected Teacher: {selectedTeacher ? selectedTeacher.name : "None"}
         </p>
-        <TimeTableCard />
+        {/* {selectedIcon ? <TimeTableTabular /> : <TimeTableCard />} */}
+        <TimeTableCard/>
       </div>
     </div>
   );
