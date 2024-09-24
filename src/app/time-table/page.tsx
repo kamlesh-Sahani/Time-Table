@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 import TimeTableCard from "@/components/TimeTableCard";
 import TeacherSidebar from "@/components/TeacherSidebar";
-import TimeTableTabular from "@/components/TimeTableTabular";
-
 const TimeTablePage = () => {
   const [timetableData, setTimetableData] = useState([
     {

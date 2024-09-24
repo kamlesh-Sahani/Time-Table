@@ -1,6 +1,8 @@
 import * as motion from "framer-motion/client"
-import Link from "next/link"
-const HomePage = () => {
+import Link from "next/link";
+import dbConnect from "@/utils/db-connect";
+const HomePage = async() => {
+  await dbConnect();
   return (
     <motion.div className="bg-back text-white flex flex-col gap-6  items-center pb-24 ">
       <motion.h1 initial={{opacity:0.4, y:-140}} whileInView={{opacity:1,y:0}} transition={{delay:0.2}} className="text-7xl font-bold mb-2 leading-tight drop-shadow-sm max-sm:text-4xl text-center">Elevate Your <span className="text-blue-700">Academic Life</span> with Our <span className="text-blue-700">Smart</span> Scheduling <span className="text-blue-700"> Solution</span></motion.h1>
