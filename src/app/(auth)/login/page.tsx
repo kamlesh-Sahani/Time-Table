@@ -1,10 +1,11 @@
+import { userLogin } from '@/app/actions/authAction'
 import Link from 'next/link'
 const LoginPage = () => {
   return (
     <div className="flex  justify-center h-full ">
     <div className="w-[610px] rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-blue-500 mb-6">Login</h2>
-      <form >
+      <form action={userLogin}>
         <div className="mb-4">
           <label htmlFor="email" className="block text-white text-sm font-semibold mb-2">
             Email

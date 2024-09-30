@@ -6,7 +6,7 @@ interface ClassAssignedType{
     subject:string;
     time:string;
 }
-interface TeacherType{
+export interface TeacherType{
     teacherName:string;
     subjects:string[];
     classAssigned:ClassAssignedType[];
