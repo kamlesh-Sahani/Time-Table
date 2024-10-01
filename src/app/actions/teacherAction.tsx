@@ -1,8 +1,7 @@
 "use server";
 import TeacherModel  from "@/model/teacher.model";
-import dbConnect from "@/utils/db-connect";
+import { revalidatePath } from "next/cache";
 export const addTeacher = async (formData: FormData) => {
-  await dbConnect();
   try {
     const teacherName = formData.get("teacherName");
     const subjects = formData.get("subjects");
@@ -34,11 +33,12 @@ export const addTeacher = async (formData: FormData) => {
       };
     }
 
+    revalidatePath("/time-table");
     return {
       message: "teacher is successfuly ceated",
       success: true,
-      teacher,
     };
+    
   } catch (error: any) {
     return {
       message: `${error.message}: teacher is faild to create`,

@@ -7,6 +7,7 @@ interface ClassAssignedType{
     time:string;
 }
 export interface TeacherType{
+    _id:string;
     teacherName:string;
     subjects:string[];
     classAssigned:ClassAssignedType[];
@@ -40,5 +41,5 @@ const teacherSchema = new mongoose.Schema<TeacherType>({
 },{timestamps:true});
 
 
-const TeacherModel = mongoose.models.Teacher as mongoose.Model<TeacherType> || mongoose.model<TeacherType>("Teacher",teacherSchema);
+const TeacherModel = mongoose.models?.Teacher as mongoose.Model<TeacherType> || mongoose.model<TeacherType>("Teacher",teacherSchema);
 export default TeacherModel;

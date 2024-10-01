@@ -3,7 +3,6 @@ import UserModel from "@/model/user.model";
 import dbConnect from "@/utils/db-connect";
 export const userLogin = async(formData:FormData)=>{
     try {
-        await dbConnect();
         const email = formData.get("email");
         const password = formData.get("password");
         if(!email || !password){

@@ -1,7 +1,6 @@
-"use client";
-import React, { useState } from "react";
 import TimeTableCard from "@/components/TimeTableCard";
 import TeacherSidebar from "@/components/TeacherSidebar";
+import TeachersCard from "@/components/server-component/TeacherCard";
 const TimeTablePage = () => {
   return (
     <div className="flex flex-col flex-1 h-full bg-back justify-center">
@@ -11,6 +10,7 @@ const TimeTablePage = () => {
           Editable Timetable
         </h1>
         <TimeTableCard />
+     
       </div>
     </div>
   );
