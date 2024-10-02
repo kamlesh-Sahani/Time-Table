@@ -1,6 +1,5 @@
 "use client";
 import { addTeacher } from "@/app/actions/teacherAction";
-import SubmitButton from "./SubmitButton";
 import toast from "react-hot-toast";
 import { useRef, useState } from "react";
 

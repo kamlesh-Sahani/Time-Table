@@ -1,11 +1,29 @@
+"use client";
 import { userLogin } from '@/app/actions/authAction'
 import Link from 'next/link'
+import { useState } from 'react';
+import toast from 'react-hot-toast';
+import {useRouter} from "next/navigation"
 const LoginPage = () => {
+  const [loading,setLoading] = useState<boolean>(false);
+  const router = useRouter();
   return (
     <div className="flex  justify-center h-full ">
     <div className="w-[610px] rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-blue-500 mb-6">Login</h2>
-      <form action={userLogin}>
+      <form action={async(formData:FormData)=>{
+        setLoading(true)
+        const response  = await userLogin(formData);
+        if(response.success){
+          toast.success(response.message);
+          setLoading(false);
+          router.push("/time-table");
+        }
+        if(!response.success){
+          toast.error(response.message || "faild to login");
+        }
+        setLoading(false);
+      }}>
         <div className="mb-4">
           <label htmlFor="email" className="block text-white text-sm font-semibold mb-2">
             Email
@@ -39,7 +57,9 @@ const LoginPage = () => {
           type="submit"
           className="w-full py-3 bg-blue-500 text-black font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
         >
-        Login
+      {
+    loading?"loading ...":"Login"
+    }
         </button>
 
       </form>

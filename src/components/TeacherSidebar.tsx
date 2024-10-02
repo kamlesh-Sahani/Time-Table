@@ -4,7 +4,7 @@ import TeacherAddForm from "./server-component/TeacherAddForm";
 import { useState } from "react";
 import TeachersCard from "./server-component/TeacherCard";
 const TeacherSidebar = () => {
-  const [addFromOpen, setAddFormOpen] = useState<boolean>(true);
+  const [addFromOpen, setAddFormOpen] = useState<boolean>(false);
   return (
     <div className="w-full p-4 max-2xl:p-10 bg-back flex flex-col">
       <div className="flex items-center justify-between mb-4">
