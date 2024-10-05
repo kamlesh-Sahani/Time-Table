@@ -1,4 +1,4 @@
-import TeacherModel from "@/model/teacher.model";
+import TeacherModel from "@/models/teacher.model";
 import { NextResponse } from "next/server";
 
 export async function GET(){

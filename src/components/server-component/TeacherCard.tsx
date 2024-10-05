@@ -1,4 +1,4 @@
-import { TeacherType } from "@/model/teacher.model";
+import { TeacherType } from "@/models/teacher.model";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiOutlineEye } from "react-icons/ai";

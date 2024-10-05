@@ -1,5 +1,5 @@
 "use server";
-import UserModel from "@/model/user.model";
+import UserModel from "@/models/user.model";
 import { cookies } from "next/headers";
 export const userLogin = async(formData:FormData)=>{
     try {

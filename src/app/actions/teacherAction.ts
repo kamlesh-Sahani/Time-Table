@@ -1,5 +1,5 @@
 "use server";
-import TeacherModel  from "@/model/teacher.model";
+import TeacherModel  from "@/models/teacher.model";
 import { revalidatePath } from "next/cache";
 export const addTeacher = async (formData: FormData) => {
   try {

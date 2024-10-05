@@ -1,4 +1,4 @@
-import TeacherModel from "@/model/teacher.model";
+import TeacherModel from "@/models/teacher.model";
 
 const teacherData = {
   teacher: {
