@@ -8,6 +8,7 @@ export interface DepartmentType {
     semisters: {
       semister: number;
       subjects: Array<string>;
+      _id:mongoose.Schema.Types.ObjectId;
     }[];
     noOfSections: number;
     noOfSemister: number;
@@ -52,6 +53,7 @@ const departmentSchema = new mongoose.Schema<DepartmentType>(
   },
   { timestamps: true }
 );
+
 
 const DepartmentModel =
   (mongoose.models?.Department as Model<DepartmentType>) ||

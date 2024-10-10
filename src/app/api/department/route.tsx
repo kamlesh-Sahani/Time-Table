@@ -1,9 +1,11 @@
 import DepartmentModel from "@/models/department.model";
-import { NextResponse } from "next/server";
-
-export async function GET(){
+import { NextRequest, NextResponse } from "next/server";
+export async function GET(req:NextRequest){
     try {
-        const departments  = await DepartmentModel.find({});
+        const params = req.nextUrl.searchParams;
+        const departmentId = params.get("id")
+        console.log(departmentId)
+        const departments  = await DepartmentModel.findById(departmentId);
         return NextResponse.json({
             message:"successfuly get deprtment",
             success:true,

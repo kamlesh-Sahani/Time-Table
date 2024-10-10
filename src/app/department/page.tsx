@@ -62,7 +62,6 @@ const DepartmentPage = () => {
           courseSections: 1,
           courseSemister: 6,
         });
-       
     }else{
         toast.error(response.message || "something went wrong")
     }
